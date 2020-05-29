@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Option</title>
+</head>
+<body>
+    <form id="new-form" action="/choices" method="POST">
+    <a href="/">HOME</a>
+    <a href="/choices/new">OPTION LISTS</a>
+    <a href="/choices/show">CHOICES</a>
+    <div class="days">
+    <select name="weekdays">
+        <option value="Weeday">MON</option>
+        <option value="Weekday">TUE</option>
+        <option value="Weekday">WED</option>
+        <option value="Weekday">THUR</option>
+        <option value="Weekday">FRI</option>
+    </select>
+    
+    <select name="time">
+        <option value="Time">7:00 am</option>
+        <option value="Time">12:30 pm</option>
+        <option value="Time">6:30 pm</option>
+    </select>
+    <P>Create Your List Of Options For The Weekday</P>
+    <input type="string" name="option">
+        <button type="submit">Add Option</button>
+</form>
+</div>
+</body>
+</html>
+
+<!-- <form id="new-form" action="/choices" method="POST">
+    <label>Monday:</label>
+    <input type="text" name="monday">
+    <label>Tuesday</label>
+    <input type="text" name="tuesday">
+    <label>Wednesday</label>
+    <select name="wednesday">
+      <option value="G">G</option>
+      <option value="PG">PG</option>
+      <option value="PG-13">PG-13</option>
+      <option value="R">R</option>
+    </select>
+    <label>Cast (separate actors with commas):</label>
+    <input type="text" name="cast">
+    <label>Now Showing:</label>
+    <input type="checkbox" name="nowShowing" checked>
+    <input type="submit" value="Add option">
+  </form> -->
