@@ -1,10 +1,18 @@
 var express = require('express');
 var router = express.Router();
-const optionsCtrl = require('../controllers/options')
+const optionsCtrl = require('../controllers/options');
 
-/* GET users listing. */
-router.get('/', optionsCtrl.create);
-router.get('/new', optionsCtrl.new);
-router.get('/:id', optionsCtrl.show);
+
+router.get('/new', isLoggedIn, optionsCtrl.new);
+router.post('/', isLoggedIn, optionsCtrl.create);
+router.get('/', isLoggedIn, optionsCtrl.index);
+
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
+        next();
+    } else {
+        res.redirect('/auth/google')
+    }
+}
 
 module.exports = router;

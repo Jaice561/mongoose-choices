@@ -1,23 +1,29 @@
 const Option = require('../models/option');
 
 module.exports = {
-    create,
     new: newOption,
-    show
+    create,
+    index
+};
+
+function newOption(req, res) {
+    res.render('options/new');
 }
 
 function create(req, res) {
-    Option.create(req.body);
-    res.render('options/');
-    }
-  
+    const option = new Option(req.body);
+    option.user = req.user._id;
+    option.save(function(err) {
+        if (err) return res.render('options/new');
+        res.redirect('/options');
+    })
 
-  function newOption(req, res) {
-    res.render('options/new', {title: 'Add Option'});
 }
 
-function show(req, res) {
-    res.render('options/show', {
-    
+function index(req, res) {
+    Option.find({user: req.user._id}, function(err, options) {
+        res.render('options/index', {options});
     });
-  }
+}
+
+

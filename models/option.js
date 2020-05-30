@@ -1,14 +1,24 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const optionsSchema = new mongoose.Schema({
-    weekdays: {
+var optionSchema = new mongoose.Schema({
+    weekday: {
         type: String,
-        enum: ['MON', 'TUS', 'WED', 'THUR', 'FRI']
+        // enum: ['MON', 'TUE', 'WED', 'THU', 'FRI']
     },
-    time: {
-        type: Number
+    
+    date: {
+        type: Date
+    },
+
+    optionsList: {
+    type: String
+    }, 
+
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
     }
 });
 
-module.exports = mongoose.model('Option', optionsSchema);
+module.exports = mongoose.model('Option', optionSchema);
