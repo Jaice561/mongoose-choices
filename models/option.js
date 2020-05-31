@@ -19,6 +19,10 @@ var optionSchema = new mongoose.Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
+    },
+    isChoice: {
+        type: Boolean,
+        default: false
     }
 });
 
