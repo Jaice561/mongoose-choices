@@ -8,7 +8,8 @@ var optionSchema = new mongoose.Schema({
     },
     
     date: {
-        type: Date
+        type: Date,
+        required: true
     },
 
     optionsList: {
