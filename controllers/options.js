@@ -48,6 +48,7 @@ function addOption(req, res,) {
   }
   function makeChoice(req, res) {
     const option = new Option(req.body);
+    option.user = req.user._id;
     option.isChoice = true;
     option.save(function(err) {
         if (err) return res.render('options');
