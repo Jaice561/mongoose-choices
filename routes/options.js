@@ -7,8 +7,8 @@ router.get('/new', isLoggedIn, optionsCtrl.new);
 router.post('/', isLoggedIn, optionsCtrl.create);
 router.get('/', isLoggedIn, optionsCtrl.index);
 router.post('/show', isLoggedIn, optionsCtrl.show);
-router.post('/show', isLoggedIn, optionsCtrl.makeChoice);
-router.get('/show', isLoggedIn, optionsCtrl.addChoice)
+// router.post('/show', isLoggedIn, optionsCtrl.makeChoice);
+// router.get('/show', isLoggedIn, optionsCtrl.addChoice)
 // router.delete('/options', optionsCtrl.delete);
 
 

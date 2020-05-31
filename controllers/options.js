@@ -5,9 +5,9 @@ module.exports = {
     create,
     index,
     show,
-    addOption,
-    makeChoice,
-    addChoice
+    // addOption,
+    // makeChoice,
+    // addChoice
     // createChoice
 };
 
@@ -40,30 +40,30 @@ function show(req, res) {
     });
 }
 
-function addOption(req, res,) {
-    Option.find({user: req.user._id}, function(err, options) {
-        res.render('options/show', {options});
-    });
-  }
+// function addOption(req, res,) {
+//     Option.find({user: req.user._id}, function(err, options) {
+//         res.render('options/show', {options});
+//     });
+//   }
 
-  function addChoice(req, res,) {
-    Option.find({user: req.user._id, isChoice: true}, function(err, options) {
-        res.render('options/show', {options});
-    });
-  }
-  function makeChoice(req, res) {
-    const option = new Option(req.body);
-    option.user = req.user._id;
-    option.isChoice = true;
-    option.save(function(err) {
-        if (err) return res.render('options/');
-        option.find({user: req.user._id, isChoice: true}, function(err, options) {
-            res.render('options/show', {options});
-        });
+//   function addChoice(req, res,) {
+//     Option.find({user: req.user._id, isChoice: true}, function(err, options) {
+//         res.render('options/show', {options});
+//     });
+//   }
+//   function makeChoice(req, res) {
+//     const option = new Option(req.body);
+//     option.user = req.user._id;
+//     option.isChoice = true;
+//     option.save(function(err) {
+//         if (err) return res.render('options/');
+//         option.find({user: req.user._id, isChoice: true}, function(err, options) {
+//             res.render('options/show', {options});
+//         });
         // res.redirect('options/show');
-    })
+    // })
 
-}
+// }
 
 
 //   function createChoice(req, res,) {
