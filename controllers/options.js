@@ -31,8 +31,13 @@ function index(req, res) {
     });
 }
 
+// function show(req, res) {
+//     res.render('options/show');
+// }
 function show(req, res) {
-    res.render('options/show');
+    Option.find({user: req.user._id}, function(err, options) {
+        res.render('options/show', {options});
+    });
 }
 
 function addOption(req, res,) {
@@ -52,7 +57,10 @@ function addOption(req, res,) {
     option.isChoice = true;
     option.save(function(err) {
         if (err) return res.render('options/');
-        res.redirect('options/show');
+        option.find({user: req.user._id, isChoice: true}, function(err, options) {
+            res.render('options/show', {options});
+        });
+        // res.redirect('options/show');
     })
 
 }
