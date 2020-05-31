@@ -4,13 +4,12 @@ const optionsCtrl = require('../controllers/options');
 
 
 router.get('/new', isLoggedIn, optionsCtrl.new);
-// router.post('/', isLoggedIn, optionsCtrl.create);
+router.post('/', isLoggedIn, optionsCtrl.create);
 router.get('/', isLoggedIn, optionsCtrl.index);
 // router.get('/show', isLoggedIn, optionsCtrl.show);
-// router.post('/show', isLoggedIn, optionsCtrl.makeChoice);
-router.post('/', isLoggedIn, optionsCtrl.makeChoice);
+router.post('/show', isLoggedIn, optionsCtrl.makeChoice);
 router.get('/show', isLoggedIn, optionsCtrl.addChoice)
-router.post('/', isLoggedIn, optionsCtrl.create);
+
 // router.delete('/options', optionsCtrl.delete);
 
 

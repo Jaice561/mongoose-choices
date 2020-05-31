@@ -51,7 +51,7 @@ function addOption(req, res,) {
     option.user = req.user._id;
     option.isChoice = true;
     option.save(function(err) {
-        if (err) return res.render('options');
+        if (err) return res.render('/options');
         res.redirect('options/show');
     })
 
