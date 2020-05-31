@@ -12,7 +12,7 @@
     <a href="/options/new">CREATE OPTIONS</a>
     <a href="/options/show">CHOICE LIST</a>
   <h1>Option List</h1>
-  <form action="/options/show" method="POST">
+  <!-- <form action="/options/show" method="POST"> -->
   <table>
     <thead>
       <tr>
@@ -23,18 +23,19 @@
     </thead>
     <tbody>
         <% options.forEach(function(option) { %>
-       
+       <tr>
+        <form action="/options/show" method="POST">
             <td><%= option.weekday %></td>
          <td><%= option.date.toLocaleString() %></td>
           <td><%= option.optionsList %></td>
           <td> 
                 <input type="submit" value="Pick Option">
           </td>
-    
+        </form>
         </tr>
         <% }); %>
     </tbody>
   </table>
-</form>
+<!-- </form> -->
 </body>
 </html>
