@@ -24,18 +24,13 @@
     <tbody>
         <% options.forEach(function(option) { %>
        <tr>
-        <form action="/options/show" method="POST">
             <td><%= option.weekday %></td>
          <td><%= option.date.toLocaleString() %></td>
           <td><%= option.optionsList %></td>
-          <td> 
-                <input type="submit" value="Pick Option">
-          </td>
-        </form>
+        <td> <a href="options/<%=option.id%>">Pick Option</a> </td> 
         </tr>
         <% }); %>
     </tbody>
   </table>
-<!-- </form> -->
 </body>
 </html>

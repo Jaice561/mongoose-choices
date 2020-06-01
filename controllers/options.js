@@ -5,6 +5,7 @@ module.exports = {
     create,
     index,
     show,
+    pickOption
     // addOption,
     // makeChoice,
     // addChoice
@@ -39,6 +40,16 @@ function show(req, res) {
         res.render('options/show', {options});
     });
 }
+
+function pickOption(req, res) {
+    Option.findById(req.params.id, function(err, option) {
+          option.isChoice = true;
+          option.save(function(err) {
+              console.log('error while saving');
+          });
+      res.render('options/show', {option});
+    });
+  }
 
 // function addOption(req, res,) {
 //     Option.find({user: req.user._id}, function(err, options) {
