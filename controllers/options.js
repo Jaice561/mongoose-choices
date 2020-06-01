@@ -5,11 +5,8 @@ module.exports = {
     create,
     index,
     show,
-    pickOption
-    // addOption,
-    // makeChoice,
-    // addChoice
-    // createChoice
+    pickOption,
+    deleteOption
 };
 
 function newOption(req, res) {
@@ -32,9 +29,6 @@ function index(req, res) {
     });
 }
 
-// function show(req, res) {
-//     res.render('options/show');
-// }
 function show(req, res) {
     Option.find({user: req.user._id}, function(err, options) {
         res.render('options/show', {options});
@@ -51,40 +45,7 @@ function pickOption(req, res) {
     });
   }
 
-// function addOption(req, res,) {
-//     Option.find({user: req.user._id}, function(err, options) {
-//         res.render('options/show', {options});
-//     });
-//   }
-
-//   function addChoice(req, res,) {
-//     Option.find({user: req.user._id, isChoice: true}, function(err, options) {
-//         res.render('options/show', {options});
-//     });
-//   }
-//   function makeChoice(req, res) {
-//     const option = new Option(req.body);
-//     option.user = req.user._id;
-//     option.isChoice = true;
-//     option.save(function(err) {
-//         if (err) return res.render('options/');
-//         option.find({user: req.user._id, isChoice: true}, function(err, options) {
-//             res.render('options/show', {options});
-//         });
-        // res.redirect('options/show');
-    // })
-
-// }
+  function deleteOption(req, res){
 
 
-//   function createChoice(req, res,) {
-//     // Option.deleteOne({user: req.user._id});
-//     // res.render('/options');
-//     const option = Option(req.body);
-//     option.user = req.user._id;
-//     option.save(function(err) {
-//         if (err) return res.redirect('/options/show');
-//         res.render('/options');
-//     })
-//     }
-   
+  }

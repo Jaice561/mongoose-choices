@@ -8,11 +8,7 @@ router.post('/', isLoggedIn, optionsCtrl.create);
 router.get('/', isLoggedIn, optionsCtrl.index);
 router.post('/show', isLoggedIn, optionsCtrl.show);
 router.get('/:id', isLoggedIn, optionsCtrl.pickOption);
-
-// router.post('/show', isLoggedIn, optionsCtrl.makeChoice);
-// router.get('/show', isLoggedIn, optionsCtrl.addChoice)
-// router.delete('/options', optionsCtrl.delete);
-
+router.delete('/:id', isLoggedIn, optionsCtrl.deleteOption);
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
