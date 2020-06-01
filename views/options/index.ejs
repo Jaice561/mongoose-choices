@@ -10,7 +10,7 @@
 <body>
     <a href="/">HOME</a>
     <a href="/options/new">CREATE OPTIONS</a>
-    <a href="/options/show">CHOICE LIST</a>
+    <a href="/options/showAllChoices">CHOICE LIST</a>
   <h1>Option List</h1>
   <table>
     <thead>
@@ -22,19 +22,21 @@
     </thead>
     <tbody>
         <% options.forEach(function(option) { %>
-            <form action="/options/<%= option._id %>?_method=DELETE" method="POST">
        <tr>
             <td><%= option.weekday %></td>
          <td><%= option.date.toLocaleString() %></td>
           <td><%= option.optionsList %></td>
         <td> <a href="options/<%=option.id%>">Pick Option</a> </td> 
-        <td>
-            <button type="submit">X</button>
-      </td>
+            <td> <form action="options/<%= option.id %>?_method=DELETE" method="POST"> 
+                <button type="submit">DELETE Option</button>
+             </form>
+            </td> 
         </tr>
-    </form>
         <% }); %>
     </tbody>
   </table>
 </body>
 </html>
+
+
+

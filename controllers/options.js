@@ -6,6 +6,7 @@ module.exports = {
     index,
     show,
     pickOption,
+    getChoices,
     deleteOption
 };
 
@@ -37,15 +38,26 @@ function show(req, res) {
 
 function pickOption(req, res) {
     Option.findById(req.params.id, function(err, option) {
+          option.user = req.user._id;
           option.isChoice = true;
           option.save(function(err) {
-            //   console.log('error while saving');
           });
       res.render('options/show', {option});
     });
   }
 
-  function deleteOption(req, res){
-
-
+  function getChoices(req, res) {
+    Option.find({user: req.user._id, isChoice: true}, function(err, options) {
+        res.render('options/showAll', {options});
+    });
   }
+
+  function deleteOption(req, res) {
+
+    Option.deleteOne({_id:req.params.id}, function (err, option) {
+        console.log('deleted');
+          Option.find({user: req.user._id}, function(err, options) {
+          res.render('options/index', {options});
+      });
+    });
+}

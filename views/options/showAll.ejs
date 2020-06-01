@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +19,13 @@
           </tr>
         </thead>
         <tbody>
+            <% options.forEach(function(option) { %>
             <tr>
                 <td><%= option.weekday %></td>
              <td><%= option.date.toLocaleString() %></td>
               <td><%= option.optionsList %></td>
             </tr>
+            <% }); %>
         </tbody>
       </table>
 </body>
