@@ -45,7 +45,7 @@ function pickOption(req, res) {
     Option.findById(req.params.id, function(err, option) {
           option.isChoice = true;
           option.save(function(err) {
-              console.log('error while saving');
+            //   console.log('error while saving');
           });
       res.render('options/show', {option});
     });
