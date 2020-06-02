@@ -1,8 +1,117 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
+
+h1 {
+  font-size: 70px;
+  font-weight: bolder;
+}
+
+/* show all page css */
+.showAllYourChoice {
+  font-size: 100px;
+  padding-left: 15%;
+  /* padding-top: 40px; */
+}
+
+.showAllYourChoice1 {
+  padding-top: 100px;
+}
+
+.showAllBorder {
+  border: solid;
+  border-width: 70px;
+  border-bottom: 0;
+}
+
+.showAllDay {
+  padding-left: 35%;
+}
+
+.showAllWeekday {
+  font-size: 30px;
+
+}
+
+.showAllWeekdayChoice {
+  font-size: 18px;
+  text-align: center;
+}
+
+/* index page css */
+.optionList {
+  font-size: 100px;
+}
+
+.optionBorder {
+  border: solid;
+  border-bottom: 0;
+}
+
+.optionDay {
+  padding-left: 35%;
+}
+
+.weekday {
+  font-size: 25px;
+}
+
+.weekdayOption {
+  font-size: 18px;
+}
+
+.optionListHeader {
+  border: solid;
+  border-width: 10px;
+}
+
+h1 {
+  display: inline;
+}
+
+/* home page css */
+.home {
+  font-size: 150px;
+  /* margin-left: 25%;
+  margin-top: 50px; */
+}
+
+.home1 {
+  margin-left: 28%;
+  margin-top: 200px;
+  color: black;
+}
+
+.homePara {
+  font-size: 40px;
+  padding-left: 15%;
+  margin-top: 20px;
+  color: black;
+}
+
+.homeLink {
+  margin-left: 40%;
+  padding-top: 20px;
+}
+
+.home1Link {
+  font-size: 45px;
+}
+
+.HomeBorder {
+  border: solid;
+  border-width: 50px;
+  padding-bottom: 290px;
+  color: green;
+}
+
+
+
+
+
+

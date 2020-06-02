@@ -1,3 +1,5 @@
+<%- include('../partials/header') %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +16,10 @@
     <title>Mongoose Options</title>
 </head>
 <body>
-    <a href="/">Home</a>
+    <!-- <a href="/">Home</a>
     <a href="/options">OPTION LIST</a>
-    <a href="/options/showAllChoices">CHOICE LIST</a>
-    <h2>Create Your List Of Options</h2>
+    <a href="/options/showAllChoices">CHOICE LIST</a> -->
+    <h2 class="option">Create Your List Of Options</h2>
 <form action="/options" method="POST">
   <label>Weekday:
     <select name="weekday">
@@ -38,3 +40,5 @@
 </form>
 </body>
 </html>
+
+<%- include('../partials/footer') %>

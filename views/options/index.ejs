@@ -1,3 +1,5 @@
+<%- include('../partials/header') %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +10,19 @@
   <title>Option List</title>
 </head>
 <body>
-    <a href="/">HOME</a>
+    <!-- <a href="/">HOME</a>
     <a href="/options/new">CREATE OPTIONS</a>
-    <a href="/options/showAllChoices">CHOICE LIST</a>
-  <h1>Option List</h1>
-  <table>
+    <a href="/options/showAllChoices">CHOICE LIST</a> -->
+    <div class="optionListHeader">
+        <ul class="indexHeader"> 
+        <h1 class="logo">J-MO</h1> 
+ <h1 class="optionList">Option List</h1> 
+        </ul>
+</div>
+  <div class="optionBorder">
+  <table class="optionDay">
     <thead>
-      <tr>
+      <tr class="weekday">
         <th>Weekday</th>
         <th>Date</th>
         <th>Option list</th>
@@ -22,7 +30,7 @@
     </thead>
     <tbody>
         <% options.forEach(function(option) { %>
-       <tr>
+       <tr class="weekdayOption">
             <td><%= option.weekday %></td>
          <td><%= option.date.toLocaleString() %></td>
           <td><%= option.optionsList %></td>
@@ -35,8 +43,11 @@
         <% }); %>
     </tbody>
   </table>
+</div>
 </body>
 </html>
+
+<%- include('../partials/footer') %>
 
 
 
