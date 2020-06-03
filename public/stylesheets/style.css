@@ -17,7 +17,6 @@ h1 {
 .showAllYourChoice {
   font-size: 100px;
   padding-left: 15%;
-  /* padding-top: 40px; */
 }
 
 .showAllYourChoice1 {
@@ -54,7 +53,13 @@ h1 {
   border: solid;
   border-bottom: 0;
   margin-top: 50px;
+  border-width: 40px;
 }
+
+.optionBorder:hover {
+  color: green;
+}
+
 
 .optionDay {
   padding-left: 35%;
@@ -62,28 +67,31 @@ h1 {
 
 .weekday {
   font-size: 25px;
+  color: black;
 }
 
 .weekdayOption {
   font-size: 18px;
+  color: black;
 }
 
 .optionListHeader {
   border: solid;
-  border-width: 10px;
-  margin-right: 65%;
+  border-width: 5px;
+  margin-right: 60%;
+  margin-left: 80px;
   border-radius: 15px;
+  margin-top: 40px;
+  padding-left: 30px;
 }
 
-h1 {
-  display: inline;
+.optionListHeader:hover {
+  color: green;
 }
 
 /* home page css */
 .home {
   font-size: 150px;
-  /* margin-left: 25%;
-  margin-top: 50px; */
 }
 
 .home1 {
@@ -117,7 +125,7 @@ h1 {
 .HomeBorder {
   border: solid;
   border-width: 50px;
-  padding-bottom: 290px;
+  padding-bottom: 210px;
   color: green;
 }
 
@@ -164,6 +172,10 @@ h1 {
   padding-left: 200px;
 }
 
+.button:hover {
+  color: green;
+}
+
 .button {
   font-size: 30px;
   border-radius: 10px;
@@ -172,9 +184,15 @@ h1 {
 .newBorder {
   border: solid;
   border-width: 50px;
-  padding-bottom: 290px;
+  padding-bottom: 200px;
   color: green;
 }
 
+/* partials css */
 
-
+.partials {
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: green;
+  padding-bottom: 40px;
+}
