@@ -5,9 +5,11 @@ module.exports = {
     create,
     index,
     show,
-    updateOption,
+    pickOption,
     getChoices,
-    deleteOption
+    deleteOption,
+    update,
+    showEdit
 };
 
 function newOption(req, res) {
@@ -36,7 +38,7 @@ function show(req, res) {
     });
 }
 
-function updateOption(req, res) {
+function pickOption(req, res) {
     Option.findById(req.params.id, function(err, option) {
           option.user = req.user._id;
           option.isChoice = true;
@@ -64,4 +66,18 @@ function updateOption(req, res) {
       });
     });
 }
+
+function showEdit(req, res) {
+    Option.findById(req.params.id, function(err, option) {
+        res.render('options/edit', {option});
+    });
+}
+
+function update(req, res) {
+    req.body.isChoice = !!req.body.isChoice
+    Option.findByIdAndUpdate(req.params.id, req.body, function(err, option) {
+        console.log(err, option)
+        res.redirect('/options');
+    });
+  }
 

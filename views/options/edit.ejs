@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Option</title>
+</head>
+<body>
+  <h1>Edit Option</h1>
+  <form action="/options/<%= option.id %>?_method=PUT" method="POST" autocomplete="off">
+    <input type="text" name="weekday" value="<%= option.weekday %>">
+    <input type="datetime-local" name="date" value="<%= option.date %>">
+    <input type="text" name="optionsList" value="<%= option.optionsList %>">
+    <input type="checkbox" name="isChoice" <%= option.isChoice ? 'checked' : '' %>>
+   
+    <button type="submit">Save Option</button>
+  </form>
+</body>
+</html>
+
+<%- include('../partials/footer') %>
+

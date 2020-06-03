@@ -1,6 +1,7 @@
 body {
   /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(182, 164, 164);
 }
 
 a {
@@ -27,6 +28,7 @@ h1 {
   border: solid;
   border-width: 70px;
   border-bottom: 0;
+  color: green;
 }
 
 .showAllDay {
@@ -35,7 +37,7 @@ h1 {
 
 .showAllWeekday {
   font-size: 30px;
-
+  color: black;
 }
 
 .showAllWeekdayChoice {
@@ -51,6 +53,7 @@ h1 {
 .optionBorder {
   border: solid;
   border-bottom: 0;
+  margin-top: 50px;
 }
 
 .optionDay {
@@ -68,6 +71,8 @@ h1 {
 .optionListHeader {
   border: solid;
   border-width: 10px;
+  margin-right: 65%;
+  border-radius: 15px;
 }
 
 h1 {
@@ -101,6 +106,12 @@ h1 {
 
 .home1Link {
   font-size: 45px;
+  color: black;
+  text-decoration: none;
+}
+
+.home1Link:hover {
+  color: green;
 }
 
 .HomeBorder {
@@ -110,8 +121,60 @@ h1 {
   color: green;
 }
 
+/* new view css */
+.newPage {
+  margin-top: 15%;
+}
 
+.newOption {
+  font-size: 70px;
+  margin-left: 22%;
+  font-weight: bolder;
+  color: black;
+  
+}
 
+.NewForm {
+  margin-left: 35%;
+  margin-top: 1%;
+  
+}
+
+.newWeekday {
+  padding-bottom: 10px;
+  font-size: 30px;
+  color: black;
+}
+
+.newDate {
+  padding-bottom: 10px;
+  font-size: 30px;
+  color: black;
+}
+
+.newOptionList {
+  padding-bottom: 10px;
+  font-size: 30px;
+  color: black;
+}
+
+.newAddOption {
+  padding-bottom: 10px;
+  font-size: 30px;
+  padding-left: 200px;
+}
+
+.button {
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.newBorder {
+  border: solid;
+  border-width: 50px;
+  padding-bottom: 290px;
+  color: green;
+}
 
 
 

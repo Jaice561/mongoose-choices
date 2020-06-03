@@ -7,8 +7,10 @@ router.get('/new', isLoggedIn, optionsCtrl.new);
 router.post('/', isLoggedIn, optionsCtrl.create);
 router.get('/', isLoggedIn, optionsCtrl.index);
 router.get('/show', isLoggedIn, optionsCtrl.getChoices);
-router.get('/:id', isLoggedIn, optionsCtrl.updateOption);
+router.get('/:id', isLoggedIn, optionsCtrl.pickOption);
 router.delete('/:id', isLoggedIn, optionsCtrl.deleteOption);
+router.get('/edit/:id', isLoggedIn, optionsCtrl.showEdit);
+router.put('/:id', isLoggedIn, optionsCtrl.update);
 
 
 

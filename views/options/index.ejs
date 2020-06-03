@@ -12,10 +12,10 @@
 <body>
     <!-- <a href="/">HOME</a>
     <a href="/options/new">CREATE OPTIONS</a>
-    <a href="/options/showAllChoices">CHOICE LIST</a> -->
+    <a href="/options/showAllChoices">CHOICE LIST</a>  -->
     <div class="optionListHeader">
         <ul class="indexHeader"> 
-        <h1 class="logo">J-MO</h1> 
+        <!-- <h1 class="logo">J-MO</h1>  -->
  <h1 class="optionList">Option List</h1> 
         </ul>
 </div>
@@ -31,6 +31,7 @@
     <tbody>
         <% options.forEach(function(option) { %>
        <tr class="weekdayOption">
+        <td> <a href="options/edit/<%= option.id %>">EDIT OPTION</a> </td> 
             <td><%= option.weekday %></td>
          <td><%= option.date.toLocaleString() %></td>
           <td><%= option.optionsList %></td>

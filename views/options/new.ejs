@@ -16,13 +16,16 @@
     <title>Mongoose Options</title>
 </head>
 <body>
-    <!-- <a href="/">Home</a>
-    <a href="/options">OPTION LIST</a>
-    <a href="/options/showAllChoices">CHOICE LIST</a> -->
-    <h2 class="option">Create Your List Of Options</h2>
+    <div class="newBorder">
+<div class="newPage">
+    
+    <h1 class="newOption">Create Your List Of Options</h1>
+
 <form action="/options" method="POST">
+    <div class="NewForm">
+    <div class="newWeekday">
   <label>Weekday:
-    <select name="weekday">
+    <select name="weekday" class="button">
         <option value="MON">Monday</option>
         <option value="TUE">Tuesday</option>
         <option value="WED">Wednesday</option>
@@ -30,14 +33,27 @@
         <option value="FRI">Friday</option>
     </select>
   </label><br>
+</div>
+
+<div class="newDate">
   <label>Date
-      <input type="datetime-local" name="date">
+      <input type="datetime-local" name="date" class="button">
   </label><br>
+</div>
+
+<div class="newOptionList">
   <label>Option
-    <input type="text" name="optionsList">
+    <input type="text" name="optionsList" class="button">
   </label><br>
-  <input type="submit" value="Add Option">
+</div>
+
+<div class="newAddOption">
+  <input type="submit" value="Add Option" class="button">
+</div>
+</div>
 </form>
+</div>
+</div>
 </body>
 </html>
 
