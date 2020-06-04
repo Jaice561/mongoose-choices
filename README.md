@@ -5,15 +5,16 @@ Options is a website where the user will be able to create a list of options of 
 ![landing.png](https://github.com/Jaice561/mongoose-choices/blob/master/landing.png)
 
 # Technologies Used
-- Mongo db
-- JavaScripT
+- MongoDB
+- JavaScript
 - HTML
 - CSS
 
-# Link to game
-[Click here to get started]()
+# Getting started
+[Click here to get started](https://jaice.herokuapp.com/)
+[Click here to get started](https://trello.com/b/gDePPEjE/welcome-to-trello)
 
 # Future enhancements
-- 
+- Add more CSS
 - Make the game mobile responsive 
-- 
+- Add notification

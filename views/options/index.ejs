@@ -35,11 +35,11 @@
           <td><%= option.optionsList %></td>
           <td> <form action="options/<%= option.id %>?_method=DELETE" method="POST"> 
             <button type="submit">DELETE Option</button>
-         </form> <br> </td> 
+         </form> </td> 
         </div>
         <div class="pickEdit">
-        <td class="pickOption"> <br> <a href="options/<%=option.id%>">Pick Option</a> </td> 
-        <td class="editOption"> <br> <a href="options/edit/<%= option.id %>">EDIT OPTION</a> </td> 
+        <td class="pickOption"> <a href="options/<%=option.id%>">Pick Option</a> </td> 
+        <td class="editOption"> <a href="options/edit/<%= option.id %>">EDIT OPTION</a> </td> 
     </div>    
 
         </tr>
