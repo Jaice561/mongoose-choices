@@ -40,14 +40,11 @@ function show(req, res) {
 
 function pickOption(req, res) {
     Option.findById(req.params.id, function(err, option) {
-          option.user = req.user._id;
           option.isChoice = true;
           option.save(function(err) {
+            res.redirect('/options/show');
           });
     });
-    Option.find({isChoice: true}, function(err, options) {
-        res.redirect('/options/show');
-    })
 }
 
 

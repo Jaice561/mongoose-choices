@@ -21,24 +21,24 @@
   <table class="optionDay">
     <thead>
       <tr class="weekday">
-        <th>Weekday</th>
-        <th>Date</th>
-        <th>Option list</th>
+        <th class="divOW">Weekday</th>
+        <th class="divOD">Date</th>
+        <th class="divOL">Option list</th>
       </tr>
     </thead>
     <tbody>
         <div class="weekdayDiv">
         <% options.forEach(function(option) { %>
        <tr class="weekdayOption">
-            <td><%= option.weekday %></td>
-         <td><%= option.date.toLocaleString() %></td>
-          <td><%= option.optionsList %></td>
+            <td class="divOW"><%= option.weekday %></td>
+         <td class="divOD"><%= option.date.toLocaleString() %></td>
+          <td class="divOL"><%= option.optionsList %></td>
           <td> <form action="options/<%= option.id %>?_method=DELETE" method="POST"> 
-            <button type="submit">DELETE Option</button>
+            <button type="submit" class="delete">DELETE Option</button>
          </form> </td> 
         </div>
         <div class="pickEdit">
-        <td class="pickOption"> <a href="options/<%=option.id%>">Pick Option</a> </td> 
+        <td class="pickOption"> <a href="options/<%=option.id%>">PICK OPTION</a> </td> 
         <td class="editOption"> <a href="options/edit/<%= option.id %>">EDIT OPTION</a> </td> 
     </div>    
 

@@ -16,7 +16,8 @@ h1 {
 /* show all page css */
 .showAllYourChoice {
   font-size: 80px;
-  padding-left: 10%;
+  padding-left: 15%;
+  font-family: BOSTON TRAFFIC;
 }
 
 .showAllYourChoice:hover {
@@ -39,7 +40,7 @@ h1 {
 }
 
 .showAllDay {
-  padding-left: 35%;
+  align-items: center;
 }
 
 .showAllWeekday {
@@ -52,9 +53,15 @@ h1 {
   text-align: center;
 }
 
+.divW, .divD, .divO {
+  padding-left: 150px;
+  font-family: Helvetica;
+}
+
 /* index page css */
 .optionList {
-  font-size: 100px;
+  font-size: 60px;
+  padding-left: 105px;
 }
 
 .optionBorder {
@@ -68,10 +75,9 @@ h1 {
   color: green;
 }
 
-
-.optionDay {
-  padding-left: 35%;
-}
+/* .optionDay {
+  padding-left: 15%;
+} */
 
 .weekday {
   font-size: 25px;
@@ -101,18 +107,27 @@ a {
   color: black;
 }
 
-a:hover {
-  color: green;
-}
-
 button {
   color: white;
   background-color: black;
 }
 
-button:hover {
-  color: black;
-  background-color:green;
+.divOW, .divOD, .divOL{
+  padding-left: 80px;
+}
+
+.pickOption, .editOption {
+  padding-left: 30px;
+}
+
+
+.delete {
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.delete:hover {
+  color: green;
 }
 
 /* home page css */
@@ -169,7 +184,6 @@ button:hover {
   margin-left: 8%;
   font-weight: bolder;
   color: black;
-  
 }
 
 .NewForm {
@@ -225,4 +239,6 @@ button:hover {
   padding-left: 20px;
   background-color: green;
   padding-bottom: 10px;
+  text-decoration-line: none;
 }
+

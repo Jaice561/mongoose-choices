@@ -18,17 +18,17 @@
     <table class="showAllDay">
         <thead>
           <tr class="showAllWeekday">
-            <th>Weekday</th> 
-            <th>Date</th>
-            <th>Option list</th> 
+          <th class="divW">Weekday</th>
+          <th class="divD">Date</th>
+          <th class="divO">Option list</th>
           </tr>
         </thead>
         <tbody>
             <% options.forEach(function(option) { %>
             <tr class="showAllWeekdayChoice">
-                <td><%= option.weekday %></td>
-             <td><%= option.date.toLocaleString() %></td>
-              <td><%= option.optionsList %></td>
+               <td class="divW"><%= option.weekday %></td> 
+            <td class="divD"><%= option.date.toLocaleString() %>
+            <td class="divO"><%= option.optionsList %></td>  
             </tr>
             <% }); %>
         </tbody>
