@@ -10,13 +10,12 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
-        <!-- <a href="" class="brand-logo left">SEI Student Fun Facts</a> -->
         <ul class="right">
           <li>
             <% if (user) { %>
-                <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+                <a class="logOut" href="/logout"><i class="material-icons left"></i>Log Out</a>
             <% } else { %>
-                <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+                <a class="logIn" href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
             <% } %>
           </li>
         </ul>
@@ -31,12 +30,8 @@
     </div>
     <p class="homePara">Click below if you would like to create some options for yourself </p>
     <div class="homeLink">
-      <!-- <ul class="homeUnLink"> -->
     <a href="/options/new" class="home1Link">CREATE OPTIONS</a>
-    <!-- <a href="/options" class="home2Link">OPTION LIST</a> -->
-  <!-- </ul> -->
   </div>
-    <!-- <a href="/options/showAll">CHOICE LIST</a> -->
   </div>
   </body>
 

@@ -180,6 +180,22 @@ button {
   color: green;
 }
 
+.nav-wrapper {
+  border: solid;
+  background-color: black;
+  color: green;
+}
+
+.logOut {
+  color: green;
+  font-size: 20px;
+}
+
+.logIn {
+  color: green;
+  font-size: 20px;
+}
+
 /* new view css */
 .newPage {
   margin-top: 10%;
@@ -242,7 +258,7 @@ button {
 
 .partials {
   padding-top: 55px;
-  padding-left: 20%;
+  padding-left: 18%;
   /* margin-bottom: -10px; */
   background-color: green;
   padding-bottom: 10px;
@@ -250,7 +266,11 @@ button {
   font-weight: 900;
 }
 
-/* index css */
+@media (max-width: 600px) {
+  body {
+    display: block;
+  }
+}
 
 
 

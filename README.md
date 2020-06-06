@@ -11,7 +11,7 @@ Options is a website where the user will be able to create a list of options of 
 - CSS
 
 # Getting started
-[Click here to get started](https://jaice.herokuapp.com/)
+[Click here to get started](https://jaice.herokuapp.com/) <br>
 [Click here to get started](https://trello.com/b/gDePPEjE/welcome-to-trello)
 
 # Future enhancements
