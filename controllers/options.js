@@ -1,4 +1,5 @@
 const Option = require('../models/option');
+const email = require('../controllers/email')
 
 module.exports = {
     new: newOption,
@@ -9,7 +10,7 @@ module.exports = {
     getChoices,
     deleteOption,
     update,
-    showEdit
+    showEdit,
 };
 
 function newOption(req, res) {
@@ -21,6 +22,7 @@ function create(req, res) {
     option.user = req.user._id;
     option.save(function(err) {
         if (err) return res.render('options/new');
+        email.sendEmail(option, req.user.email)
         res.redirect('/options');
     })
 
@@ -77,4 +79,5 @@ function update(req, res) {
         res.redirect('/options');
     });
   }
+
 
