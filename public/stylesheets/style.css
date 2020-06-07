@@ -75,19 +75,15 @@ h1 {
   color: green;
 }
 
-/* .optionDay {
-  padding-left: 15%;
-} */
-
 .weekday {
   font-size: 25px;
   color: black;
 }
 
-.weekdayOption {
+/* .weekdayOption {
   font-size: 18px;
   color: black;
-}
+} */
 
 .optionListHeader {
   border: solid;
@@ -136,6 +132,11 @@ button {
   color: green;
 }
 
+.optionWeekday, .optionDate, .optionOpList {
+  padding-left: 95px;
+  font-size: 20px;
+} 
+
 /* home page css */
 .home {
   font-size: 120px;
@@ -172,7 +173,7 @@ button {
 .HomeBorder {
   border: solid;
   border-width: 50px;
-  padding-bottom: 60px;
+  padding-bottom: 65px;
   color: black;
 }
 

@@ -27,12 +27,12 @@
       </tr>
     </thead>
     <tbody>
-        <div class="weekdayDiv">
-        <% options.forEach(function(option) { %>
-       <tr class="weekdayOption">
-        <td> <a href="options/edit/<%=option.id%>"><%= option.weekday %></a></td>
-         <td> <a href="options/edit/<%=option.id%>"><%= option.date.toLocaleString() %> </a></td>
-          <td> <a href="options/edit/<%=option.id%>"><%= option.optionsList %> </a></td>
+      <% options.forEach(function(option) { %>
+          <div class="weekdayDiv">
+       <tr>
+        <td class="optionWeekday"> <a href="options/edit/<%=option.id%>"><%= option.weekday %></a></td>
+         <td class="optionDate"> <a href="options/edit/<%=option.id%>"><%= option.date.toLocaleString() %> </a></td>
+          <td class="optionOpList"> <a href="options/edit/<%=option.id%>"><%= option.optionsList %> </a></td>
           <td> <form action="options/<%= option.id %>?_method=DELETE" method="POST"> 
             <button type="submit" class="delete">X</button>
          </form> </td> 
