@@ -1,5 +1,4 @@
 body {
-  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(182, 164, 164);
 }
@@ -79,11 +78,6 @@ h1 {
   font-size: 25px;
   color: black;
 }
-
-/* .weekdayOption {
-  font-size: 18px;
-  color: black;
-} */
 
 .optionListHeader {
   border: solid;
@@ -260,7 +254,6 @@ button {
 .partials {
   padding-top: 55px;
   padding-left: 18%;
-  /* margin-bottom: -10px; */
   background-color: green;
   padding-bottom: 10px;
   font-size: 30px;

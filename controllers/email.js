@@ -11,7 +11,6 @@ function sendEmail(option,recipientEmailAddr) {
     var datestr=''+date.getMinutes()+' '+date.getHours()+' '+date.getDate()+' '+(Number(date.getMonth())+1).toString()+' '+option.weekday;
     console.log(datestr);
 
-    // e-mail message options
 let mailOptions = {
     from: 'Jaice561@gmail.com',
     to: recipientEmailAddr,
@@ -19,7 +18,6 @@ let mailOptions = {
     text: option.optionsList
 };
 
-// e-mail transport configuration
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -29,7 +27,7 @@ let transporter = nodemailer.createTransport({
 });
 
 var emailtask=cron.schedule(datestr, () => {
-// Send e-mail
+
 transporter.sendMail(mailOptions, function(error, info){
     if (error) {
       console.log(error);

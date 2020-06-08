@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 var optionSchema = new mongoose.Schema({
     weekday: {
         type: String,
-        // enum: ['MON', 'TUE', 'WED', 'THU', 'FRI']
     },
     
     date: {
