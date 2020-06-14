@@ -22,7 +22,6 @@ function create(req, res) {
     option.user = req.user._id;
     option.save(function(err) {
         if (err) return res.render('options/new');
-        email.sendEmail(option, req.user.email)
         res.redirect('/options');
     })
 

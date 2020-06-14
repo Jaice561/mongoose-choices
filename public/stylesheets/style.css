@@ -260,12 +260,58 @@ button {
   font-weight: 900;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   body {
     display: block;
   }
+} */
+
+@media only screen and (min-width: 1800px) {
+  .newBorder {
+    padding-bottom: 12.5%;
+  }
+
+  .HomeBorder {
+    padding-bottom: 16%;
+  }
+  
+  .home1 {
+    margin-left: 32%;
+    margin-top: 160px;
+    color: black;
+  }
+
+  .homePara {
+    font-size: 40px;
+    padding-left: 15%;
+    margin-top: -40px;
+    color: green;
+  }
+  
+  .homeLink {
+    margin-left: 39%;
+    padding-top: 10px;
+  }
+  
+  .newOption {
+    margin-left: 20%;
+  }
+  
+  .NewForm {
+    margin-left: 33%;
+    margin-top: 1%;
+    
+  }
+
+  .partials {
+    padding-top: 55px;
+    padding-left: 25.5%;
+    background-color: green;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: 900;
+  }
+
 }
-
-
 
 

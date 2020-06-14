@@ -1,3 +1,6 @@
+const Option = require('./models/option');
+const email = require('./controllers/email')
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -61,4 +64,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+Option.find({}, function(err, options){
+email.sendEmail(options, 'Jaice561@gmail.com')
+})
 module.exports = app;
