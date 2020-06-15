@@ -7,13 +7,15 @@ module.exports = {
 }
 
 function sendEmail(options,recipientEmailAddr) {
-    let optionsDict = {}
+    let optionsDict = {};
     options.forEach(function (option) {
-        if (!optionsDict[option.weekday])
+        if (!optionsDict[option.weekday]) {
             optionsDict[option.weekday] = [];
+            optionsDict[option.weekday].push(option.optionsList)
+    }
         else
             optionsDict[option.weekday].push(option.optionsList);
-    });
+});
      
         let transporter = nodemailer.createTransport({
             service: 'gmail',
