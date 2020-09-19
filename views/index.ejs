@@ -1,4 +1,4 @@
-
+<%- include('partials/header') %>
 
 <!DOCTYPE html>
 <html>
@@ -6,34 +6,21 @@
     <title>Mongoose Choices</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <ul class="right">
-          <li>
-            <% if (user) { %>
-                <a class="logOut" href="/logout"><i class="material-icons left"></i>Log Out</a>
-            <% } else { %>
-                <a class="logIn" href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
-            <% } %>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
   <body>
-    <div class="HomeBorder">
-    <div class="home1">
-    <h1 class="home">WELCOME</h1>
+    <div class="home-container">
+      <div class="home">
+        <h1 class="home">WELCOME</h1>
+      </div>
+        <p class="homeP">Click below if you would like to create some options for yourself </p>
+      <div class="homeLink">
+        <a href="/options/new" class="home1Link">CREATE OPTIONS</a>
+      </div>
     </div>
-    <p class="homePara">Click below if you would like to create some options for yourself </p>
-    <div class="homeLink">
-    <a href="/options/new" class="home1Link">CREATE OPTIONS</a>
-  </div>
-  </div>
   </body>
 
 </html>
+
+<%- include('partials/footer') %>
+
+
 

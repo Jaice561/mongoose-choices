@@ -20,8 +20,8 @@ function sendEmail(options,recipientEmailAddr) {
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'Jaice561@gmail.com',
-            pass: 'Chaice@561'
+                user: '',
+            pass: ''
             }
         });
     for (var weekday in optionsDict) {
