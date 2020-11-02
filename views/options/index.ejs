@@ -10,39 +10,30 @@
   <title>Option List</title>
 </head>
 <body>
-    <div class="optionListHeader">
- <h1 class="optionList">Option List</h1> 
-       
-</div>
-  <div class="optionBorder">
+  <div class="weekday">
+    <h1 class="optionList-h1">Option List</h1> 
   <table class="optionDay">
-    <thead>
-      <tr class="weekday">
-        <th class="divOW">Weekday</th>
-        <th class="divOD">Date</th>
-        <th class="divOL">Option list</th>
-      </tr>
-    </thead>
     <tbody>
       <% options.forEach(function(option) { %>
-          <div class="weekdayDiv">
-       <tr>
-        <td class="optionWeekday"> <a href="options/edit/<%=option.id%>"><%= option.weekday %></a></td>
-         <td class="optionDate"> <a href="options/edit/<%=option.id%>"><%= option.date.toLocaleString() %> </a></td>
-          <td class="optionOpList"> <a href="options/edit/<%=option.id%>"><%= option.optionsList %> </a></td>
+        <tr class="weekday-th">
+          <th class="weekday-t">Weekday</th>
+          <td class="weekday-t"> <a href="options/edit/<%=option.id%>"><%= option.weekday %></a></td>
+          <th class="weekday-t">Date</th>
+          <td class="weekday-t"> <a href="options/edit/<%=option.id%>"><%= option.date.toLocaleString() %></a></td>
+          <th class="weekday-t">Option list</th>
+          <td class="weekday-t"> <a href="options/edit/<%=option.id%>"><%= option.optionsList %> </a></td>
           <td> <form action="options/<%= option.id %>?_method=DELETE" method="POST"> 
-            <button type="submit" class="delete">X</button>
-         </form> </td>
-        </div>
-        <div class="pickEdit">
-        <td class="pickOption"> <a href="options/<%=option.id%>">PICK OPTION</a> </td> 
-    </div>    
-
-        </tr>
-        <% }); %>
-    </tbody>
-  </table>
+            <button type="submit" class="delete">X</button> </form> </td>
+            
+            <td class="pickOption"> <a href="options/<%=option.id%>">PICK OPTION</a> </td> 
+          </tr>
+  
+          <% }); %>
+        </tbody>
+      </table>
 </div>
+
+
 </body>
 </html>
 

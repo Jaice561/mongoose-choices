@@ -1,61 +1,50 @@
 <%- include('../partials/header') %>
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Mongoose Options</title>
-</head>
+  </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mongoose Options</title>
-</head>
-<body>
-    <div class="newBorder">
-<div class="newPage">
-    
-    <h1 class="newOption">Create Your List Of Options</h1>
-
+  <div class="newPage">
+    <h1 class="new-h1">Create Your List Of Options</h1>
+    <div class="newForm">
 <form action="/options" method="POST">
-    <div class="NewForm">
+    <div class="newDate">
+      <label>Date
+        <input type="datetime-local" name="date" class="button">
+      </label><br>
+    </div>
     <div class="newWeekday">
-  <label>Weekday:
-    <select name="weekday" class="button">
-        <option value="MON">Monday</option>
-        <option value="TUE">Tuesday</option>
-        <option value="WED">Wednesday</option>
-        <option value="THU">Thursday</option>
-        <option value="FRI">Friday</option>
-        <option value="SAT">Saturday</option>
-        <option value="SUN">Sunday</option>
-    </select>
-  </label><br>
+      <label>Weekday:
+        <select name="weekday" class="button">
+          <option value="MON">Monday</option>
+          <option value="TUE">Tuesday</option>
+          <option value="WED">Wednesday</option>
+          <option value="THU">Thursday</option>
+          <option value="FRI">Friday</option>
+          <option value="SAT">Saturday</option>
+          <option value="SUN">Sunday</option>
+        </select>
+      </label><br>
+    </div>
+
+  <div class="newOptionList">
+    <label>Option
+      <input type="text" name="optionsList" class="button">
+    </label><br>
+  </div>
 </div>
 
-<div class="newDate">
-  <label>Date
-      <input type="datetime-local" name="date" class="button">
-  </label><br>
-</div>
-
-<div class="newOptionList">
-  <label>Option
-    <input type="text" name="optionsList" class="button">
-  </label><br>
-</div>
-
-<div class="newAddOption">
-  <input type="submit" value="Add Option" class="button">
-</div>
-</div>
+  <div>
+    <input type="submit" value="Add Option" class="new-button">
+  </div>
 </form>
-</div>
-</div>
+  </div>
+
 </body>
 </html>
 

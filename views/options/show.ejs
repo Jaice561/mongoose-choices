@@ -3,34 +3,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Document</title>
 </head>
 <body>
-    <div class="showAllYourChoice1">
-    <h1 class="showAllYourChoice">Your Choice For The Day!</h1>
-  </div>
-    <div class="showAllBorder">
-    <table class="showAllDay">
-        <thead>
-          <tr class="showAllWeekday">
-          <th class="divW">Weekday</th>
-          <th class="divD">Date</th>
-          <th class="divO">Option list</th>
-          </tr>
-        </thead>
-        <tbody>
+
+<div class="showBorder">
+  <table class="showDay">
+    <h1 class="showAllYourChoice">Choice Lists!</h1>
+    <tbody>
             <% options.forEach(function(option) { %>
-            <tr class="showAllWeekdayChoice">
-               <td class="divW"><%= option.weekday %></td> 
-            <td class="divD"><%= option.date.toLocaleString() %>
-            <td class="divO"><%= option.optionsList %></td>  
-            </tr>
+              <tr class="weekday-th">
+                <th class="weekday-t">Weekday</th>
+                <td class="weekday-t"> <a href="options/edit/<%=option.id%>"><%= option.weekday %></a></td>
+                <th class="weekday-t">Date</th>
+                <td class="weekday-t"> <a href="options/edit/<%=option.id%>"><%= option.date.toLocaleString() %></a></td>
+                <th class="weekday-t">Option list</th>
+                <td class="weekday-t"> <a href="options/edit/<%=option.id%>"><%= option.optionsList %> </a></td>
+                <td> <form action="options/<%= option.id %>?_method=DELETE" method="POST"> 
+                  <button type="submit" class="delete">X</button> </form> </td>
+                  
+                </tr>
+        
             <% }); %>
         </tbody>
       </table>
     </div>
+
+
 </body>
 </html>
 
