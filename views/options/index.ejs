@@ -23,9 +23,13 @@
           <th class="weekday-t">Option list</th>
           <td class="weekday-t"> <a href="options/edit/<%=option.id%>"><%= option.optionsList %> </a></td>
           <td> <form action="options/<%= option.id %>?_method=DELETE" method="POST"> 
-            <button type="submit" class="delete">X</button> </form> </td>
+            <button type="submit" class="delete">X
+
+            </button> 
+              <a href="options/<%=option.id%>">PICK OPTION</a> </td> 
+          
+          </form> </td>
             
-            <td class="pickOption"> <a href="options/<%=option.id%>">PICK OPTION</a> </td> 
           </tr>
   
           <% }); %>

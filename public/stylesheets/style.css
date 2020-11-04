@@ -243,10 +243,12 @@ body {
     border-radius: 15px;
     display: inline-block;
     background-color: transparent;
-    border: 3px solid rgb(87, 61, 206);
+    /* border: 3px solid rgb(87, 61, 206); */
     font-size: 2rem;
     text-decoration: uppercase;
-    margin-top: 90px;
+    margin-top: 120px;
+    margin-left: 27%;
+    align-items: center;
     transition: .3s ease background-color;
     transition-property: background-color, color;
 }
@@ -360,6 +362,10 @@ body {
 
 @media only screen and (min-width: 768px) {
 
+    .weekday {
+        margin-left: 38%;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -390,6 +396,12 @@ body {
 
     .container ul li{
         display: inline;
+    }
+
+    .weekday {
+        margin-left: 45%;
+        margin-top: 120px;
+        border: none;
     }
 
 }
