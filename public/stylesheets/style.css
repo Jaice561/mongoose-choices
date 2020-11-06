@@ -313,7 +313,7 @@ body {
 
 #footer {
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -324,7 +324,7 @@ body {
     display: flex;
     min-height: 100px;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
@@ -339,7 +339,7 @@ body {
 #footer .social-icon {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 #footer .social-item {
     height: 50px;
